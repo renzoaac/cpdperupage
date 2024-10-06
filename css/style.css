@@ -51,10 +51,12 @@ nav ul li a:hover {
 /* Carrusel de Imágenes */
 .carousel {
     position: relative;
-    max-width: 1000px;
-    margin: 20px auto;
+    width: 90%;               /* Ancho del carrusel: 90% del contenedor padre */
+    max-width: 1200px;        /* Ancho máximo para pantallas grandes */
+    margin: 20px auto;        /* Centrado horizontal */
     overflow: hidden;
     border-radius: 10px;
+    max-height: 500px;        /* Altura máxima del carrusel */
 }
 
 .carousel-container {
@@ -64,15 +66,16 @@ nav ul li a:hover {
 
 .carousel-slide {
     display: flex;
-    width: 300%;
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide img {
     width: 100%;
-    flex-shrink: 0;
+    height: 500px;            /* Altura fija para mantener consistencia */
+    object-fit: cover;        /* Mantiene la relación de aspecto y recorta si es necesario */
 }
 
+/* Dots del Carrusel */
 .carousel-dots {
     text-align: center;
     padding: 10px 0;
@@ -138,12 +141,21 @@ footer {
         flex-direction: column;
     }
 
-    .carousel-slide {
-        width: 300%;
+    .carousel-slide img {
+        height: 300px;       /* Altura reducida en dispositivos medianos */
     }
 
     .video-container iframe {
-        width: 100%;
         height: 315px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        height: 200px;       /* Altura aún más reducida en dispositivos pequeños */
+    }
+
+    .video-container iframe {
+        height: 200px;
     }
 }

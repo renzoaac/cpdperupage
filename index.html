@@ -26,9 +26,39 @@
     <section class="carousel">
         <div class="carousel-container">
             <div class="carousel-slide">
-                <img src="images/image1.jpg" alt="Imagen 1">
-                <img src="images/image2.jpg" alt="Imagen 2">
-                <img src="images/image3.jpg" alt="Imagen 3">
+                <img 
+                    src="images/image1-1200x600.jpg" 
+                    srcset="
+                        images/image1-600x300.jpg 600w,
+                        images/image1-1200x600.jpg 1200w,
+                        images/image1-1600x800.jpg 1600w
+                    " 
+                    sizes="(max-width: 600px) 600px,
+                           (max-width: 1200px) 1200px,
+                           1600px"
+                    alt="Imagen 1">
+                <img 
+                    src="images/image2-1200x600.jpg" 
+                    srcset="
+                        images/image2-600x300.jpg 600w,
+                        images/image2-1200x600.jpg 1200w,
+                        images/image2-1600x800.jpg 1600w
+                    " 
+                    sizes="(max-width: 600px) 600px,
+                           (max-width: 1200px) 1200px,
+                           1600px"
+                    alt="Imagen 2">
+                <img 
+                    src="images/image3-1200x600.jpg" 
+                    srcset="
+                        images/image3-600x300.jpg 600w,
+                        images/image3-1200x600.jpg 1200w,
+                        images/image3-1600x800.jpg 1600w
+                    " 
+                    sizes="(max-width: 600px) 600px,
+                           (max-width: 1200px) 1200px,
+                           1600px"
+                    alt="Imagen 3">
             </div>
         </div>
         <div class="carousel-dots">
@@ -42,7 +72,7 @@
     <section class="video-section" id="video">
         <h2>Video Destacado</h2>
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/NrwikhoU4R0" 
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
                 title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
