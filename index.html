@@ -4,47 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidad para el Desarrollo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
         <h1>Comunidad para el Desarrollo</h1>
     </header>
-    
+
+    <!-- Navegación -->
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-nosotros">Sobre Nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-    
-    <div class="hero" id="inicio">
-        <h1>Bienvenidos a Nuestra Comunidad</h1>
-        <p>Un espacio dedicado al crecimiento académico y profesional.</p>
-    </div>
-    
-    <div class="container" id="sobre-nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>En "Comunidad para el Desarrollo" nos enfocamos en fomentar el aprendizaje continuo, la colaboración y el desarrollo de habilidades clave para el éxito académico y profesional.</p>
-    </div>
-    
-    <div class="container" id="servicios">
-        <h2>Servicios</h2>
         <ul>
-            <li>Talleres y Seminarios</li>
-            <li>Recursos Educativos</li>
-            <li>Mentoría y Asesoramiento</li>
-            <li>Foros de Discusión</li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre Nosotros</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="contact.html">Contacto</a></li>
         </ul>
-    </div>
-    
-    <div class="container" id="contacto">
-        <h2>Contacto</h2>
-        <p>Para más información, puedes contactarnos a través del correo: <a href="mailto:info@comunidaddesarrollo.com">info@comunidaddesarrollo.com</a></p>
-    </div>
-    
+    </nav>
+
+    <!-- Carrusel de Imágenes -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="images/image1.jpg" alt="Imagen 1">
+                <img src="images/image2.jpg" alt="Imagen 2">
+                <img src="images/image3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- Sección de Video -->
+    <section class="video-section" id="video">
+        <h2>Video Destacado</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
     <footer>
         <p>&copy; 2024 Comunidad para el Desarrollo. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
