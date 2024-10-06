@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidad para el Desarrollo</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p6l+8jqcT2xgO7KPwQ+8pA3BZBvJx4r3uFXlCZ1vMWD/XiNQDYZfh8d4DjL1wXfO/lXgLq1M6XwG4E1H6QJrXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
     <!-- Encabezado -->
@@ -28,6 +36,7 @@
             <div class="carousel-slide">
                 <img 
                     src="images/image1-1200x600.jpg" 
+                    loading="lazy"
                     srcset="
                         images/image1-600x300.jpg 600w,
                         images/image1-1200x600.jpg 1200w,
@@ -39,6 +48,7 @@
                     alt="Imagen 1">
                 <img 
                     src="images/image2-1200x600.jpg" 
+                    loading="lazy"
                     srcset="
                         images/image2-600x300.jpg 600w,
                         images/image2-1200x600.jpg 1200w,
@@ -50,6 +60,7 @@
                     alt="Imagen 2">
                 <img 
                     src="images/image3-1200x600.jpg" 
+                    loading="lazy"
                     srcset="
                         images/image3-600x300.jpg 600w,
                         images/image3-1200x600.jpg 1200w,
@@ -84,6 +95,11 @@
     <footer>
         <p>&copy; 2024 Comunidad para el Desarrollo. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="#" class="whatsapp-button" id="whatsapp-button" target="_blank" aria-label="Comunícate con Nosotros">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
