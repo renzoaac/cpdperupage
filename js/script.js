@@ -20,12 +20,6 @@ function nextSlide() {
     showSlide(slideIndex);
 }
 
-// Función para retroceder al slide anterior
-function prevSlide() {
-    slideIndex--;
-    showSlide(slideIndex);
-}
-
 // Evento de clic en los puntos
 dots.forEach(dot => {
     dot.addEventListener('click', () => {
@@ -35,7 +29,16 @@ dots.forEach(dot => {
 });
 
 // Intervalo para el desplazamiento automático
-setInterval(nextSlide, 5000); // Cambia de imagen cada 5 segundos
+let slideInterval = setInterval(nextSlide, 5000); // Cambia de imagen cada 5 segundos
+
+// Pausar el carrusel al pasar el mouse
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+carousel.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(nextSlide, 5000);
+});
 
 // Mostrar el primer slide al cargar la página
 showSlide(slideIndex);
