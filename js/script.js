@@ -47,7 +47,7 @@ showSlide(slideIndex);
 
 // Función para obtener el número de WhatsApp desde Google Sheets
 async function fetchWhatsAppNumber() {
-    const apiUrl = 'https://script.google.com/macros/s/AKfycbwWeovkmLcSk7qMJyvnyDUfT1t2nRVdtESmzito1-LQxlGFpC0HM-oMJOvxgxkzMAqC/exec'; // Reemplaza con tu URL de Web App
+    const apiUrl = 'hhttps://script.google.com/macros/s/AKfycbzCsFLwHL3Ie_-W-VWhXrR9UKIHg6-HqWkwqN7IHHlR3lyT9Z_7ipfclhDbecet0DaK/exec'; // Reemplaza con tu URL de Web App
 
     try {
         const response = await fetch(apiUrl);
