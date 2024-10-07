@@ -42,3 +42,39 @@ carousel.addEventListener('mouseleave', () => {
 
 // Mostrar el primer slide al cargar la página
 showSlide(slideIndex);
+
+// script.js
+
+// Función para obtener el número de WhatsApp desde Google Sheets
+async function fetchWhatsAppNumber() {
+    const apiUrl = 'https://script.google.com/macros/s/AKfycbwWeovkmLcSk7qMJyvnyDUfT1t2nRVdtESmzito1-LQxlGFpC0HM-oMJOvxgxkzMAqC/exec'; // Reemplaza con tu URL de Web App
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('Error al obtener el número de WhatsApp');
+        }
+        const data = await response.json();
+        return data.whatsapp_number;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
+// Función para actualizar el enlace de WhatsApp
+async function updateWhatsAppLink() {
+    const phoneNumber = await fetchWhatsAppNumber();
+    if (phoneNumber) {
+        const whatsappLink = `https://wa.me/${phoneNumber}`;
+        const whatsappButton = document.getElementById('whatsapp-button');
+        whatsappButton.href = whatsappLink;
+    } else {
+        // Opcional: Mostrar un mensaje o cambiar el enlace a una página de contacto alternativa
+        console.warn('No se pudo actualizar el enlace de WhatsApp.');
+    }
+}
+
+// Ejecutar la función al cargar la página
+document.addEventListener('DOMContentLoaded', updateWhatsAppLink);
+
