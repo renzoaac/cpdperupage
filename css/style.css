@@ -49,7 +49,7 @@ header {
 
 /* Logotipo */
 .logo {
-    width: 250px;                    /* Ancho del logotipo */
+    width: 350px;                    /* Ancho del logotipo */
     height: auto;                   /* Mantener la proporción de la imagen */
     margin-right: 15px;             /* Espacio entre el logotipo y el texto del título */
 }
