@@ -14,11 +14,57 @@ body {
 
 /* Encabezado */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ajusta según tus necesidades */
     background-color: #2c3e50;
-    color: #ffffff;
     padding: 20px 0;
-    text-align: center;
+    position: relative;
 }
+
+/* Contenedor del Logotipo */
+.logo-container {
+    position: absolute;
+    left: 20px; /* Ajusta la posición horizontal */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilos del Logotipo */
+.logo {
+    width: 150px; /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    display: block;
+}
+
+/* Estilos del Título */
+header h1 {
+    color: #ffffff;
+    font-size: 24px; /* Ajusta el tamaño de la fuente */
+    margin: 0;
+}
+
+/* Responsividad para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+}
+
 
 /* Navegación */
 nav {
